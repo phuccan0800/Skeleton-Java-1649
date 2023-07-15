@@ -51,11 +51,12 @@ public class Stack2<E> implements AbstractStack<E> {
     public Iterator<E> iterator() {
         return new Iterator<E>() {
             private ArrayList<E> current = stack2;
+            private int index = 0;
             @Override
-            public boolean hasNext(){ return current != null; }
+            public boolean hasNext(){ return index < current.size(); }
             @Override
             public E next() {
-                return  current.get(current.size()-1);
+                return  current.remove(current.size() - 1);
             }
         };
     }
