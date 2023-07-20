@@ -46,7 +46,6 @@ public class Main {
         linkedList.addLast(2);
         linkedList.addLast(3);
         linkedList.addFirst(0);
-        // Lấy phần tử đầu tiên và cuối cùng trong danh sách
         System.out.println("\nPhần tử đầu tiên: " + linkedList.getFirst());
         System.out.println("Phần tử cuối cùng: " + linkedList.getLast());
         linkedList.removeFirst();

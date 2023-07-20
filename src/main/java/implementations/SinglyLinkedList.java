@@ -21,6 +21,7 @@ public class SinglyLinkedList<E> implements LinkedList<E> {
         Node<E> newNode = new Node<>(element);
         if (this.head == null) {
             this.head = newNode;
+            this.tail = newNode;
         } else {
             newNode.next = this.head;
             this.head = newNode;
@@ -90,6 +91,18 @@ public class SinglyLinkedList<E> implements LinkedList<E> {
 
     @Override
     public Iterator<E> iterator() {
-        return null;
+        return new Iterator<E>() {
+            private SinglyLinkedList.Node<E> current = head;
+            @Override
+            public boolean hasNext() {
+                return current != null;
+            }
+            @Override
+            public E next() {
+                E element = current.element;
+                this.current = this.current.next;
+                return element;
+            }
+        };
     }
 }
