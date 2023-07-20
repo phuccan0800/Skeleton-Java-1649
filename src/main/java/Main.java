@@ -46,11 +46,23 @@ public class Main {
         linkedList.addLast(2);
         linkedList.addLast(3);
         linkedList.addFirst(0);
+        linkedList.addInside(2, 4);
+        printLinkedList(linkedList);
         System.out.println("\nPhần tử đầu tiên: " + linkedList.getFirst());
         System.out.println("Phần tử cuối cùng: " + linkedList.getLast());
         linkedList.removeFirst();
         linkedList.removeLast();
+        linkedList.removeLast();
+        printLinkedList(linkedList);
         System.out.println("\nKích thước danh sách: " + linkedList.size());
         System.out.println("Danh sách có rỗng hay không: " + linkedList.isEmpty());
+    }
+    public static void printLinkedList(SinglyLinkedList<?> linkedList) {
+        System.out.println("Danh sách Node: ");
+        Iterator<?> iterator = linkedList.iterator();
+        while (iterator.hasNext()) {
+            System.out.print(iterator.next() + " ");
+        }
+        System.out.println();
     }
 }
