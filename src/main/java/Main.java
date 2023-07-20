@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
-        testQueue();
+        testSinglyLinkedList();
     }
     public static void testStack(){
         Stack<Integer> stack = new Stack<>();
@@ -40,5 +40,18 @@ public class Main {
         }
         System.out.println("Size after dequeue: " + queue.size());
     }
-
+    public static void testSinglyLinkedList() {
+        SinglyLinkedList<Integer> linkedList = new SinglyLinkedList<>();
+        linkedList.addFirst(1);
+        linkedList.addLast(2);
+        linkedList.addLast(3);
+        linkedList.addFirst(0);
+        // Lấy phần tử đầu tiên và cuối cùng trong danh sách
+        System.out.println("\nPhần tử đầu tiên: " + linkedList.getFirst());
+        System.out.println("Phần tử cuối cùng: " + linkedList.getLast());
+        linkedList.removeFirst();
+        linkedList.removeLast();
+        System.out.println("\nKích thước danh sách: " + linkedList.size());
+        System.out.println("Danh sách có rỗng hay không: " + linkedList.isEmpty());
+    }
 }
