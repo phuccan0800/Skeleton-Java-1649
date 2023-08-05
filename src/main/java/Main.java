@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
-        testBinarySearch();
+//        testBinarySearch();
     }
     public static void testBinarySearch() {
         BinarySearch binarySearch  = new BinarySearch();

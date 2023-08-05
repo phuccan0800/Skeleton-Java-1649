@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 
-public class Main {
+public class Main_Set_Cover {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String[] elements = reader.readLine().substring(10).split(", ");
@@ -35,6 +35,11 @@ public class Main {
     }
 
     public static List<int[]> chooseSets(List<int[]> sets, int[] universe) {
-        // TODO
+        List<int[]> selectedSets = new ArrayList<>();
+        Set<Integer> universeSet = new HashSet<>();
+        for (int element : universe) { universeSet.add(element);}
+        while (!universeSet.isEmpty()) {
+        }
+        return selectedSets;
     }
 }

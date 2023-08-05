@@ -13,4 +13,7 @@ public class BinarySearch {
         }
         return -1;
     }
+
+    public int Search(int[] arr, int i, int length, int i1) {
+    return i;}
 }
