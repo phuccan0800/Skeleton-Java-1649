@@ -1,10 +1,17 @@
+import Searching.BinarySearch;
 import  implementations.*;
 
 import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
-        testSinglyLinkedList();
+        testBinarySearch();
+    }
+    public static void testBinarySearch() {
+        BinarySearch binarySearch  = new BinarySearch();
+        int arr[] = {1, 1, 2, 3, 3, 4, 6, 6, 7, 8, 9, 9};
+        int find = binarySearch.Search(arr, 6, arr.length, 0);
+        System.out.println(find);
     }
     public static void testStack(){
         Stack<Integer> stack = new Stack<>();
